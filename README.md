@@ -54,4 +54,14 @@ it says so in its own title line. `tools/_map_lookup.py` turns an address from a
 report into a function name using the `.map` that `/MAP` writes next to the dll -- which is why
 that map file is archived with every build rather than left to be overwritten by the next one.
 
+## Credits
+
+- Upstream project: **FrostAtom** -- [awesome_wotlk](https://github.com/FrostAtom/awesome_wotlk). Both binaries
+  here are rebuilt from that tree, and `src/AwesomeWotlkPatch/Patch.h` writes the same three places in `Wow.exe`
+  that upstream's own patcher writes.
+- iTargetingFrames: original by **Ironi**, WotLK backport by **Cheeta**
+- AwesomeCVar: original by **noname08662**
+- Detours: vendored from [microsoft/Detours](https://github.com/microsoft/Detours)
+- This fork: **Keoo** -- [discord.gg/sKpJbUrsvR](https://discord.gg/sKpJbUrsvR)
+
 Made by Keoo for Warmane. Discord: https://discord.gg/sKpJbUrsvR

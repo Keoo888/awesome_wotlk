@@ -261,7 +261,9 @@ const ownFiles = ownAddons.flatMap((addon) => {
   return fs.existsSync(dir) ? listLua(dir).filter((f) => !zh.test(f)) : [];
 });
 const textTargets = [path.join(root, 'README.md'), path.join(root, 'plan.md')].filter((f) => fs.existsSync(f))
-  .concat(listFiles(path.join(root, 'docs'), ['.md']))
+  // docs/ есть только в рабочем каталоге: в публичном клоне исходников внутренней документации нет,
+  // и отсутствие каталога -- не проход проверки «наискосок», а другое дерево.
+  .concat(fs.existsSync(path.join(root, 'docs')) ? listFiles(path.join(root, 'docs'), ['.md']) : [])
   .concat(listFiles(path.join(__dirname), ['.js']).filter((f) => !f.endsWith('run_addon_lint.js')))
   .concat(ownFiles);
 const CJK = /[\u3000-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uff66-\uff9f]/;

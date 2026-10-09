@@ -249,7 +249,12 @@ if (faulted) console.log("  внимание: транзакция упала в
   const fork = rd(path.join("reference", "awesome-fork", "awesome_wotlk-main", "src", "AwesomeWotlkLib", "Misc.cpp"));
   const forkEnums = rd(path.join("reference", "awesome-fork", "awesome_wotlk-main", "src", "AwesomeWotlkLib", "Enums.h"));
   const cpp = rd(path.join("src", "AwesomeWotlkLib", "Interact.cpp"));
-  if (!fork || !cpp) {
+  if (!fork && !fs.existsSync(path.join(root, "reference", "awesome-fork"))) {
+    // Публичный клон исходников: чужого дерева рядом нет по устройству репозитория, а не потому, что
+    // оно потерялось. Здесь пропуск, а ниже -- по-прежнему провал: он ловит случай, когда material
+    // на месте, но читается не то.
+    checks.push(["паритет interact с форком: reference/awesome-fork рядом нет -- сверка пропущена", true]);
+  } else if (!fork || !cpp) {
     checks.push(["паритет interact с форком: исходники не найдены -- сверка не сделана", false]);
   } else {
     // 1) GAMEOBJECT_TYPE_* из Enums.h -> числа; symbolic-список форка -> тот же набор чисел

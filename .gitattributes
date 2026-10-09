@@ -1,0 +1,24 @@
+* text=auto
+
+*.c       text
+*.cpp     text
+*.h       text
+*.lua     text
+*.xml     text
+*.toc     text
+*.js      text
+*.py      text
+*.md      text
+*.txt     text
+CMakeLists.txt text
+*.cmake   text
+
+*.dll  binary
+*.exe  binary
+*.lib  binary
+*.map  binary
+*.png  binary
+*.blp  binary
+*.tga  binary
+*.ttf  binary
+*.ogg  binary

@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: AW NamePlate API (pure Lua)
+## Notes: C_NamePlate over the data tables published by AwesomeWotlkLib.dll (no C function pointers), the /interact channel and the yard labels whose profile is kept in AWDistanceDB.
+## Author: Keoo
+## Version: 0.1
+## SavedVariables: AWDistanceDB
+AWNamePlateAPI.lua
+AWInteract.lua
+AWDistance.lua
+AWElvUINameplates.lua

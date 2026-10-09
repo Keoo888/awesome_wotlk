@@ -1,0 +1,22 @@
+# Артефакты сборки: их не коммитим, они пересоздаются cmake --build.
+reference/
+build/
+out/
+*.obj
+*.ilk
+*.pdb
+*.exp
+*.lib
+*.exe
+*.dll
+*.map
+
+# Инструменты
+node_modules/
+npm-debug.log*
+
+# Редакторы и локальные заметки
+.vs/
+.vscode/
+*.user
+AGENTS.local.md

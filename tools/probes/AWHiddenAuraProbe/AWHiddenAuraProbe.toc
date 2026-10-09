@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: AW Hidden Aura Probe (замер, не поставка)
+## Notes: Logs aura-slot changes on raid units so a hidden boss aura can be caught in the act. Measurement tool, not part of the pack.
+## Author: Keoo
+## SavedVariables:
+AWHiddenAuraProbe.lua

@@ -49,8 +49,7 @@ defaults to a local sandbox path, so pass yours as an argument or skip it. `tool
 `AWHiddenAuraProbe`, a measurement addon that is deliberately not part of the pack: it is
 installed for one raid to find out whether the client reports the caster of a hidden aura, and
 it says so in its own title line. `tools/_map_lookup.py` turns an address from a client crash
-report into a function name using the `.map` that `/MAP` writes next to the dll -- which is why
-that map file is archived with every build rather than left to be overwritten by the next one.
+report into a function name using the `.map` that `/MAP` writes next to the dll.
 
 ## Credits
 

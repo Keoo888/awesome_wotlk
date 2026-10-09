@@ -25,13 +25,11 @@ cmake --build reference/build --config Release
 
 Both binaries land in `reference/build/Release`, together with `dll_smoke.exe`, the host the
 first check below runs the dll in. Re-run `cmake -S . -B reference/build ...` whenever the list
-of sources changes: the generated project file keeps the old list and then fails on missing
-files, which is how a deleted source stayed in a build here once.
+of sources changes: the generated project file keeps the old list and then fails on missing files.
 
 ## Checks
 
-The checks read the sources and the built image, and they are the reason the numbers in commits
-and release notes are measurements rather than claims.
+The checks read the sources and the built image.
 
 ```
 node tools/run_dll_smoke.js        # 62 checks: the dll boots outside the game with the compiled profile,
